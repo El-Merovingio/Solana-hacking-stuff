@@ -1,0 +1,22 @@
+[package]
+name = "pocs"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+poc-framework = { version = "0.2.0" }
+owo-colors = "3.1.0"
+borsh = "0.9.1"
+borsh-derive = "0.9.1"
+kdam = "0.2"
+bs58 = "0.4.0"
+serde = "1.0.140"
+
+[lib]
+
+[patch.crates-io]
+poc-framework = { path = "/Users/miglesias/.cargo/registry/src/github.com-1ecc6299db9ec823/poc-framework-0.2.0/" }
+solana-runtime = { path = "/Users/miglesias/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-runtime-1.11.2/"}
+solana-program = { path = "/Users/miglesias/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-program-1.11.2/" }
+solana-bpf-loader-program = { path = "/Users/miglesias/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-bpf-loader-program-1.11.2/" }
