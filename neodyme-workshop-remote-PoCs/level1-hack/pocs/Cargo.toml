@@ -12,8 +12,3 @@ borsh-derive = "0.9.1"
 
 [lib]
 
-[patch.crates-io]
-poc-framework = { path = "/Users/jiglesias/.cargo/registry/src/github.com-1ecc6299db9ec823/poc-framework-0.2.0/" }
-solana-runtime = { path = "/Users/jiglesias/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-runtime-1.11.2/"}
-solana-program = { path = "/Users/jiglesias/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-program-1.11.2/" }
-solana-bpf-loader-program = { path = "/Users/jiglesias/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-bpf-loader-program-1.11.2/" }

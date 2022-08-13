@@ -1,16 +1,19 @@
 use owo_colors::OwoColorize;
-use poc_framework::solana_program::pubkey::Pubkey;
-use poc_framework::{keypair, RemoteEnvironment,};
-use poc_framework::solana_sdk::system_program;
-use poc_framework::solana_program::instruction::{AccountMeta, Instruction};
-use poc_framework::solana_sdk::{
-    signature::{read_keypair_file, Signer},
+
+use poc_framework::{
+    Environment,
+    localhost_client,
+    keypair, RemoteEnvironment,
+    solana_program::{
+        pubkey::Pubkey,
+        instruction::{AccountMeta, Instruction},
+    },
+    solana_sdk::{
+        system_program,
+        signature::{read_keypair_file, Signer},
+        bpf_loader_upgradeable::UpgradeableLoaderState,
+    },
 };
-
-use poc_framework::solana_sdk::bpf_loader_upgradeable::UpgradeableLoaderState;
-
-use poc_framework::Environment;
-use poc_framework::localhost_client;
 
 use borsh::{BorshSerialize, BorshDeserialize};
 

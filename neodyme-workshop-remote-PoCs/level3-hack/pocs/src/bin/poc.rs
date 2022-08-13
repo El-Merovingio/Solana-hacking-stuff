@@ -1,16 +1,21 @@
 use owo_colors::OwoColorize;
-use poc_framework::solana_program::pubkey::Pubkey;
-use poc_framework::{keypair, RemoteEnvironment,};
-use poc_framework::solana_sdk::system_program;
-use poc_framework::solana_program::instruction::{AccountMeta, Instruction};
-use poc_framework::solana_sdk::{
-    signature::{read_keypair_file, Signer},
+
+use poc_framework::{
+    Environment,
+    localhost_client,
+    keypair, RemoteEnvironment,
+    solana_program::{
+        pubkey::Pubkey,
+        instruction::{AccountMeta, Instruction},
+    },
+    solana_sdk::{
+        system_program,
+        signature::{read_keypair_file, Signer},
+    },
 };
 
-use poc_framework::Environment;
-use poc_framework::localhost_client;
-
 use borsh::{BorshSerialize, BorshDeserialize};
+
 #[derive(Debug, BorshDeserialize, BorshSerialize)]
 pub enum TipInstruction {
     Initialize {
@@ -54,8 +59,8 @@ pub fn main() {
     let authority_info = keypair(4);
     let tip_guy = keypair(5);
 
-    /* Create the PDA */
-    let seed:u8 = 1;
+    /* Create the PDA , if InvalidSeeds, change the value */
+    let seed:u8 = 3;
     let vault_info = Pubkey::create_program_address(&[&[seed]], &programa).unwrap();
  
     let mut env = RemoteEnvironment::new_with_airdrop(cliente1, keypair(4), 10000000000);
@@ -176,7 +181,8 @@ pub fn main() {
 
             env.airdrop(hacker.pubkey(), 100000000000);
 
-            let seed2:u8 = 11;
+            /* Create the PDA , if InvalidSeeds, change the value */
+            let seed2:u8 = 7;
             let hacker_vault = Pubkey::create_program_address(&[&[seed2]], &programa).unwrap();
 
             env.execute_as_transaction(

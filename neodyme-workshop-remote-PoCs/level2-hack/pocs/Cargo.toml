@@ -13,8 +13,3 @@ kdam = "0.2"
 
 
 [lib]
-
-[patch.crates-io]
-solana-runtime = { path = "/Users/jiglesias/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-runtime-1.11.2/"}
-solana-program = { path = "/Users/jiglesias/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-program-1.11.2/" }
-solana-bpf-loader-program = { path = "/Users/jiglesias/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-bpf-loader-program-1.11.2/" }

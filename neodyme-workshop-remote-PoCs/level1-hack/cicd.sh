@@ -4,8 +4,8 @@
 # It also serves as a reference for the commands used for building & deploying Solana programs.
 # Run this bad boy with "bash cicd.sh" or "./cicd.sh"
 
-cargo build-bpf --manifest-path=./level1/Cargo.toml --bpf-out-dir=./target/so
+cargo build-bpf --manifest-path=./Cargo.toml --bpf-out-dir=./target/so
 solana program deploy ./target/so/level1.so
-RUST_BACKTRACE=1 cargo run --manifest-path=./pocs/Cargo.toml --target-dir=./target/
+RUST_BACKTRACE=1 cargo run --bin poc
 #IF error, replace the program ID in the poc.rs with the correct
 #solana program show --programs

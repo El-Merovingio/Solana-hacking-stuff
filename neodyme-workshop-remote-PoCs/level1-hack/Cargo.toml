@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "level1",
+    "pocs",
+]
+
