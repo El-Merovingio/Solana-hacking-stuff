@@ -5,4 +5,4 @@
 	- solana-test-validator --reset
 	- In another terminal you can run: `chmod +x cicd.sh && ./cicd.sh`
 	- To reset the programs, you can un: `chmod +x reset.sh && ./reset.sh`
-- Level 4 does not use the "poc_framework"
+- Level 4 PoC, does not use the "poc_framework"
