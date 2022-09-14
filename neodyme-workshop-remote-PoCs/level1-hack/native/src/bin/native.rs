@@ -28,13 +28,6 @@ pub enum WalletInstruction {
     Withdraw { amount: u64 },
 }
 
-#[repr(C)]
-#[derive(Clone, Copy, Debug, Default, PartialEq, BorshSerialize, BorshDeserialize)]
-pub struct Wallet {
-    pub authority: Pubkey,
-    pub vault: Pubkey,
-}
-
 pub const WALLET_LEN: u64 = 32 + 32;
 
 fn main() {
